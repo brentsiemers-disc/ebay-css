@@ -1,0 +1,413 @@
+/* ============================================================
+   BIG RED TICKETS - eBay Listing Template CSS
+   Clean, minimal version - no menus, no category links
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@400;500;600;700&display=swap');
+
+/* === RESET & BASE === */
+.brt-listing *, .brt-listing *::before, .brt-listing *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.brt-listing {
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: 'Khand', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #1a1a1a;
+  line-height: 1.5;
+  background: #ffffff;
+  overflow: hidden;
+  text-align: center;
+}
+
+.brt-listing img {
+  border: none;
+  max-width: 100%;
+}
+
+/* === HEADER === */
+.brt-header {
+  background: linear-gradient(135deg, #8b1a1a 0%, #b71c1c 50%, #d32f2f 100%);
+  padding: 24px 32px 20px;
+  text-align: center;
+}
+
+.brt-header img {
+  max-width: 200px;
+  height: auto;
+  display: inline-block;
+}
+
+/* === EVENT TITLE === */
+.brt-event-title {
+  background: #f5f5f5;
+  padding: 20px 32px;
+  text-align: center;
+  border-bottom: 3px solid #b71c1c;
+}
+
+.brt-event-title h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Khand', sans-serif;
+  line-height: 1.3;
+}
+
+/* === TICKET DETAILS TABLE === */
+.brt-details-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.brt-details-table tr {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.brt-details-table tr:last-child {
+  border-bottom: none;
+}
+
+.brt-details-table td {
+  padding: 14px 32px;
+  font-size: 18px;
+  font-family: 'Khand', sans-serif;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.brt-details-table tr:nth-child(odd) td {
+  background: #ffffff;
+}
+
+.brt-details-table tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+.brt-details-table td.brt-label {
+  width: 35%;
+  font-weight: 700;
+  color: #b71c1c;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 15px;
+}
+
+.brt-details-table td.brt-value {
+  width: 65%;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 20px;
+}
+
+/* === SEATING CHART === */
+.brt-seating-chart {
+  padding: 24px 32px;
+  background: #ffffff;
+  text-align: center;
+  border-top: 1px solid #e8e8e8;
+}
+
+.brt-seating-chart .brt-chart-label {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #b71c1c;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: 'Khand', sans-serif;
+}
+
+.brt-seating-chart img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+/* === FEEDBACK BANNER === */
+.brt-feedback {
+  background: #b71c1c;
+  padding: 16px 32px;
+  text-align: center;
+}
+
+.brt-feedback p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Khand', sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+.brt-feedback span {
+  color: #ffc423;
+  font-weight: 600;
+}
+
+/* === POLICY TABS === */
+.brt-policies {
+  background: #ffffff;
+  padding: 24px 24px 16px;
+  text-align: left;
+}
+
+.brt-policies-title {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  font-family: 'Khand', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Hide all radio/checkbox inputs */
+.brt-policies input[type="radio"],
+.brt-policies input[type="checkbox"] {
+  display: none;
+}
+
+/* Desktop tab labels (horizontal row) */
+.brt-tab-headers {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  margin: 0 0 0;
+  padding: 0;
+  gap: 4px;
+}
+
+.brt-tab-headers li {
+  flex: 1;
+  display: inline-block;
+}
+
+.brt-tab-headers label {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 12px 8px;
+  color: #ffffff;
+  background: linear-gradient(180deg, #c62828 0%, #a51c1c 100%);
+  border: 1px solid #8b1a1a;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  font-family: 'Khand', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  line-height: 1.3;
+}
+
+.brt-tab-headers label:hover {
+  background: linear-gradient(180deg, #d32f2f 0%, #b71c1c 100%);
+}
+
+/* Active tab header */
+#brt-tab1:checked ~ .brt-tab-headers li:nth-child(1) label,
+#brt-tab2:checked ~ .brt-tab-headers li:nth-child(2) label,
+#brt-tab3:checked ~ .brt-tab-headers li:nth-child(3) label {
+  background: #eff2f7;
+  color: #1a1a1a;
+  border-color: #ccc;
+}
+
+/* Tab content sections - hidden by default */
+.brt-tab-content {
+  display: none;
+  width: 100%;
+  background: #eff2f7;
+  padding: 24px;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid #ccc;
+  border-top: none;
+  margin: 0 0 0;
+}
+
+.brt-tab-content p {
+  font-size: 14px;
+  font-family: 'Khand', sans-serif;
+  font-weight: 400;
+  color: #222222;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+  text-align: left;
+  margin: 0 0 12px;
+}
+
+.brt-tab-content p:last-child {
+  margin-bottom: 0;
+}
+
+.brt-tab-content strong {
+  color: #b71c1c;
+}
+
+/* Show active tab content (desktop - radio buttons) */
+#brt-tab1:checked ~ #brt-content1,
+#brt-tab2:checked ~ #brt-content2,
+#brt-tab3:checked ~ #brt-content3 {
+  display: block;
+}
+
+/* Mobile accordion labels - hidden on desktop */
+.brt-mobile-label {
+  display: none;
+  width: 100%;
+  margin: 0 0 4px;
+}
+
+.brt-mobile-label label {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  color: #222222;
+  background: #eff2f7 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="%23b71c1c" d="M7 3h2v10H7z"/><path fill="%23b71c1c" d="M3 7h10v2H3z"/></svg>') calc(100% - 16px) center no-repeat;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Khand', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.brt-mobile-label label:hover {
+  background-color: #e3e7ee;
+}
+
+/* Mobile: active accordion label gets minus icon */
+#brt-mob1:checked ~ .brt-mobile-label:nth-of-type(1) label,
+#brt-mob2:checked ~ .brt-mobile-label:nth-of-type(2) label,
+#brt-mob3:checked ~ .brt-mobile-label:nth-of-type(3) label {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="%23b71c1c" d="M3 7h10v2H3z"/></svg>');
+  background-color: #dde1e8;
+}
+
+/* Mobile: show content when checkbox is checked */
+#brt-mob1:checked ~ #brt-mob-content1,
+#brt-mob2:checked ~ #brt-mob-content2,
+#brt-mob3:checked ~ #brt-mob-content3 {
+  display: block;
+  margin: -4px 0 4px;
+  border-radius: 0 0 4px 4px;
+}
+
+/* === FOOTER === */
+.brt-footer {
+  background: linear-gradient(135deg, #8b1a1a 0%, #b71c1c 50%, #d32f2f 100%);
+  padding: 20px 32px;
+  text-align: center;
+}
+
+.brt-footer p {
+  margin: 0;
+  font-family: 'Khand', sans-serif;
+}
+
+.brt-footer .brt-footer-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.brt-footer .brt-footer-tagline {
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  margin-top: 4px;
+}
+
+/* ============================================================
+   RESPONSIVE - MOBILE (767px and below)
+   Switch from horizontal tabs to vertical accordion
+   ============================================================ */
+@media screen and (max-width: 767px) {
+  /* Hide desktop tab headers */
+  .brt-tab-headers {
+    display: none !important;
+  }
+
+  /* Hide desktop tab content (radio-driven) */
+  #brt-tab1:checked ~ #brt-content1,
+  #brt-tab2:checked ~ #brt-content2,
+  #brt-tab3:checked ~ #brt-content3 {
+    display: none !important;
+  }
+
+  /* Show mobile accordion labels */
+  .brt-mobile-label {
+    display: block;
+  }
+
+  /* Padding adjustments */
+  .brt-header {
+    padding: 20px 16px;
+  }
+
+  .brt-event-title {
+    padding: 16px;
+  }
+
+  .brt-event-title h1 {
+    font-size: 22px;
+  }
+
+  .brt-details-table td {
+    padding: 12px 16px;
+  }
+
+  .brt-details-table td.brt-label {
+    font-size: 13px;
+  }
+
+  .brt-details-table td.brt-value {
+    font-size: 17px;
+  }
+
+  .brt-seating-chart {
+    padding: 16px;
+  }
+
+  .brt-policies {
+    padding: 20px 16px 12px;
+  }
+
+  .brt-footer {
+    padding: 16px;
+  }
+
+  .brt-feedback {
+    padding: 12px 16px;
+  }
+
+  .brt-feedback p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .brt-header img {
+    max-width: 160px;
+  }
+
+  .brt-event-title h1 {
+    font-size: 20px;
+  }
+}
